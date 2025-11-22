@@ -1,0 +1,25 @@
+/**
+ * Key Insights:
+ * 
+ * 1. Anagrams have the same characters with same frequency
+ *    - "act" and "cat" both have: 1a, 1c, 1t
+ * 
+ * 2. Two ways to identify anagrams:
+ *    a) Sort strings - anagrams become identical when sorted
+ *    b) Count character frequency - create unique key
+ * 
+ * 3. Hash map is perfect for grouping
+ *    - Key: identifier (sorted string or frequency key)
+ *    - Value: list of anagrams
+ * 
+ * 4. Approach 2 is faster (no sorting)
+ *    - O(n*k) vs O(n*k log k)
+ *    - But uses slightly more complex key creation
+ * 
+ * Edge Cases Handled:
+ * - Empty string: ""
+ * - Single character: "x"
+ * - Single string in input
+ * - All strings are anagrams
+ * - No anagrams at all
+ */
